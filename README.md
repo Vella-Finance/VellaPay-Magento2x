@@ -1,5 +1,5 @@
 # VellaPay Magento 2x Module
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-) 
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors) 
 
  Vella payment gateway Magento2 extension
 
@@ -46,7 +46,7 @@ Configuration can be done using the Administrator section of your Magento store.
 * Set __Enable__ to __Yes__ and fill the rest of the config form accordingly, then click __Save Config__ to save and activate.
   Note: Your Key and merchant ID is required to activate this module for cart checkout.
 
-<img width="306" alt="vellapay admin" src="https://res.cloudinary.com/dm9otxkot/image/upload/v1675909535/Configuration-Settings-Stores-Magento-Admin_bz1hyg.png">
+<img width="100%" alt="vellapay admin" src="https://res.cloudinary.com/dm9otxkot/image/upload/v1675909535/Configuration-Settings-Stores-Magento-Admin_bz1hyg.png">
 
 ### Suggestions 
 For issues and feature request, [click here](https://github.com/Vella-Finance/VellaPay-Magento2x/issues).
