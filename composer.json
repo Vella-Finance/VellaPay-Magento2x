@@ -7,14 +7,26 @@
       "OSL-3.0",
       "AFL-3.0"
     ],
+    "keywords": [
+        "vella",
+        "magento",
+        "checkout",
+        "payment",
+        "africa",
+        "global",
+        "crypto"
+    ],
     "authors": [
         {
             "name": "Gabriel Ajenifuja",
             "email": "gabriel@vella.finance"
         }
     ],
-    "require": {},
+    "require": {
+        "php": "^7.3|^8.0"
+    },
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "Vella\\Pay\\": ""
