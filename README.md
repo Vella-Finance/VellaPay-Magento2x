@@ -23,7 +23,7 @@ composer require vella/vellapay-magento2x
 *  Create a __Vella/Pay__ folder in your Magento's __app/code__ directory.
 *  Copy the content into your Magento's __app/code/Vella/Pay__ directory.
 
-### Enable the Rave Payments module:
+### Enable the Vella Payments module:
 
 *  From your commandline, in your magento root directory, run
    
