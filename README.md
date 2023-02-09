@@ -5,7 +5,7 @@
 
 Accept payment using Vella Checkout widget for Magento2
 
-### [](https://github.com/Vella-Finance/Vella-Pay-React-Native-WebView#installation) Installation
+### [](https://github.com/Vella-Finance/VellaPay-Magento2x#installation) Installation
 
 * Go to Magento2 root folder
 
@@ -49,11 +49,11 @@ Configuration can be done using the Administrator section of your Magento store.
 <img width="306" alt="vellapay admin" src="https://res.cloudinary.com/dm9otxkot/image/upload/v1675909535/Configuration-Settings-Stores-Magento-Admin_bz1hyg.png">
 
 ### Suggestions 
-For issues and feature request, [click here](https://github.com/Vella-Finance/Vella-Pay-Magento-2x/issues).
+For issues and feature request, [click here](https://github.com/Vella-Finance/VellaPay-Magento2x/issues).
 ### License
 
 ##### GPL-3. See LICENSE.txt
 
-### [](https://github.com/Vella-Finance/Vella-Pay-Magento-2x#security) Security
+### [](https://github.com/Vella-Finance/VellaPay-Magento2x#security) Security
 If you discover any security related issues, please email hello@vella.finance instead of using the issue tracker.
 
