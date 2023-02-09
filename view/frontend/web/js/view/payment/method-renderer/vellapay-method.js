@@ -75,7 +75,7 @@ define([
                     localStorage.getItem("mage-cache-storage")
                 )["checkout-data"];
                 paymentData.email = storageData.inputFieldEmailValue;
-                paymentData.name = storageData.shippingAddressFromData[0].firstname + ' ' + storageData.shippingAddressFromData[0].lastname;
+                paymentData.name = paymentData.firstname + ' ' + paymentData.lastname;
                 //paymentData.name = 'Test User';
                 //console.log(checkoutConfig.totalsData)
             }
