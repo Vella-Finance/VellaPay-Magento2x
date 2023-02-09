@@ -100,14 +100,14 @@ define([
             else {
                 currency = checkoutConfig.totalsData.quote_currency_code;
             }
-
+           
             const config = {
                 email: paymentData.email,
                 name: paymentData.name, // string - customer name
                 amount: quote.totals().grand_total, //float - amount to pay
                 currency: currency,
                 merchant_id: vellaConfiguration.merchant_id,
-                reference: 'VE_MAGE_' + Math.floor((Math.random() * 1000000000) + 1), // string - your transaction reference
+                reference: quoteId+'_VEMAGE' + Math.floor((Math.random() * 1000000000) + 1), // string - your transaction reference
                 source: 'magento',
                 meta: [{
                     metaname: "QuoteId",
