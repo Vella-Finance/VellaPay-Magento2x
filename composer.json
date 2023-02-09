@@ -1,0 +1,25 @@
+{
+    "name": "vella/vellapay-magento2x",
+    "description": "VellaPay Payment gateway for accepting fiat and crypto payments globally",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+      "OSL-3.0",
+      "AFL-3.0"
+    ],
+    "authors": [
+        {
+            "name": "Gabriel Ajenifuja",
+            "email": "gabriel@vella.finance"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Vella\\Pay\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}
