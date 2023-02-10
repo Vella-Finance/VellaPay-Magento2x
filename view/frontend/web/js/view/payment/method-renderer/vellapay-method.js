@@ -53,7 +53,9 @@ define([
                 additional_data: {}
             };
         },
-
+        getGuestEmail: function () {
+            return quote.guestEmail;
+        },
         isActive: function () {
             return true;
         },
@@ -74,22 +76,23 @@ define([
                 var storageData = JSON.parse(
                     localStorage.getItem("mage-cache-storage")
                 )["checkout-data"];
-                paymentData.email = storageData.inputFieldEmailValue;
+                paymentData.email = quote.guestEmail;
                 paymentData.name = paymentData.firstname + ' ' + paymentData.lastname;
-                //paymentData.name = 'Test User';
-                //console.log(checkoutConfig.totalsData)
             }
 
             var quoteId = checkoutConfig.quoteItemData[0].quote_id;
 
             var _this = this;
-            _this.isPlaceOrderActionAllowed(false);
+            _this.isPlaceOrderActionAllowed(false)
 
-            var key = vellaConfiguration.test_key;
-            if (vellaConfiguration.test_mode === 1) {
+    
+            let key, base_url;
+            if (vellaConfiguration.test_mode === '1') {
+                key = vellaConfiguration.test_key;
+            } else {
                 key = vellaConfiguration.live_key;
             }
-
+           
             var currency = 'NGNT';
             if (checkoutConfig.totalsData.quote_currency_code === 'NGN') {
                 currency = 'NGNT'
@@ -100,14 +103,14 @@ define([
             else {
                 currency = checkoutConfig.totalsData.quote_currency_code;
             }
-           
+
             const config = {
                 email: paymentData.email,
                 name: paymentData.name, // string - customer name
                 amount: quote.totals().grand_total, //float - amount to pay
                 currency: currency,
                 merchant_id: vellaConfiguration.merchant_id,
-                reference: quoteId+'_VEMAGE' + Math.floor((Math.random() * 1000000000) + 1), // string - your transaction reference
+                reference: quoteId + '_VEMAGE' + Math.floor((Math.random() * 1000000000) + 1), // string - your transaction reference
                 source: 'magento',
                 meta: [{
                     metaname: "QuoteId",
@@ -130,10 +133,13 @@ define([
             vellaSDK.onSuccess(response => {
 
                 if (response.data.status == "Successful" || response.data.status == "Completed") {
-                    let base_url = 'https://sandbox.vella.finance/api/v1/checkout/transaction/' + response.data.reference + '/verify';
-                    if (!vellaConfiguration.test_mode) {
+
+                    if (vellaConfiguration.test_mode === '1') {
+                        base_url = 'https://sandbox.vella.finance/api/v1/checkout/transaction/' + response.data.reference + '/verify';
+                    } else {
                         base_url = 'https://api.vella.finance/api/v1/checkout/transaction/' + response.data.reference + '/verify';
                     }
+                    
                     var settings = {
                         "url": base_url,
                         "method": "GET",
