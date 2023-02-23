@@ -1,2 +1,4 @@
 vendor
 composer.lock
+vellapay-method-min.js
+requirejs-config.js
