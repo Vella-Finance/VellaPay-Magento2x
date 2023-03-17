@@ -21,13 +21,13 @@
 
         <div class="actions-toolbar">
             <div class="primary">
-                <button class="action primary checkout"
-                        type="submit"
-                        data-bind="
-                        click: placeOrder,
-                        attr: {title: $t('Place Order')}
-                        ">
-                    <span data-bind="i18n: 'Place Order'"></span>
+                <button class="action  checkout" type="submit" id="vellapaybutton"
+                    style=" cursor: pointer; background: #b60345;  border:0; padding: 10px; border-radius: 10px; width: 200px; color: #FFFFFF; height:40px"
+                    data-bind="
+                        click:  makePayment,
+                        attr: {title: $t('Pay Now')}">
+
+                    <span data-bind="i18n: 'Pay Now'"></span>
                 </button>
             </div>
         </div>
