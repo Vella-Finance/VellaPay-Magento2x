@@ -5,7 +5,7 @@
 			<vellapay>
 				<active>1</active>
 				<model>Vella\Pay\Model\Payment\VellaPay</model>
-				<order_status>pending</order_status>
+				<order_status>processing</order_status>
 				<title>VellaPay Payment Gateway</title>
 				<allowspecific>0</allowspecific>
 				<group>Offline</group>
