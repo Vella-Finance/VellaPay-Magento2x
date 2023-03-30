@@ -22,7 +22,7 @@
                 <button class="action  checkout" type="submit" id="vellapaybutton"
                     style=" cursor: pointer; background: #b60345;  border:0; padding: 10px; border-radius: 10px; width: 200px; color: #FFFFFF; height:40px"
                     data-bind="
-                        click:  makePayment,
+                        click:  placeOrder,
                         attr: {title: $t('Pay Now')}
                         css: {disabled: !isPlaceOrderActionAllowed()},
                         enable: (getCode() == isChecked())
