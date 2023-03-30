@@ -40,30 +40,11 @@
 						<config_path>payment/vella/live_key</config_path>
 						<comment><![CDATA[(Required) Your live key. You can get it from your <a href="https://app.vella.finance/settings/api" target="_blank"> Vella account dashboard.</a>]]></comment>
 					</field>
-
-					<!-- <field id="modal_title" showInDefault="1" showInStore="0" showInWebsite="1"
-					sortOrder="14" translate="label" type="text">
-						<label>Payment Modal Title</label>
-            <config_path>payment/vella/modal_title</config_path>
-						<comment><![CDATA[(Optional) The title on the payment modal. Default: FLW PAY]]></comment>
+					<field id="default_webhook" translate="label comment" type="label" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="0">
+						<label>Webhook URL</label>
+						<frontend_model>Vella\Pay\Block\Adminhtml\System\Config\Fieldset\Webhook</frontend_model>
 					</field>
-					<field id="modal_desc" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="16"
-					translate="label" type="text">
-						<label>Payment Modal Description</label>
-            <config_path>payment/vella/modal_desc</config_path>
-						<comment><![CDATA[(Optional) The description on the payment modal. Default: FLW PAY
-					MODAL]]></comment>
-					</field> -->
-					<!-- <field id="logo" translate="label" type="image" sortOrder="17"
-					showInDefault="1" showInWebsite="1" showInStore="1">
-				    <label>Modal Logo</label>
-				    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
-				    <upload_dir config="system/filesystem/media" scope_info="1">logo</upload_dir>
-            <config_path>payment/vella/logo</config_path>
-				    <base_url type="media" scope_info="1">logo</base_url>
-				    <comment><![CDATA[(Optional) Custom logo to show on the modal. Allowed file types: jpeg, gif,
-					png.]]></comment>
-					</field> -->
+					
 					<field id="merchant_id" showInDefault="1" showInStore="0" showInWebsite="1"
 						sortOrder="14" translate="label" type="text">
 						<label>Merchant ID</label>
@@ -87,11 +68,6 @@
 					<field id="title" showInDefault="1" showInStore="1" showInWebsite="1"
 						sortOrder="30" translate="label" type="text">
 						<label>Title</label>
-					</field>
-					<field id="order_status" showInDefault="1" showInStore="1" showInWebsite="1"
-						sortOrder="40" translate="label" type="select">
-						<label>New Order Status</label>
-						<source_model>Magento\Sales\Model\Config\Source\Order\Status</source_model>
 					</field>
 					<field id="sort_order" showInDefault="1" showInStore="1" showInWebsite="1"
 						sortOrder="60" translate="label" type="text">

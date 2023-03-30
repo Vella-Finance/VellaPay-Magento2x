@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="vella_sales_order_place_before">
+        <observer name="Vella_Pay_ObserverBeforeSalesOrderPlace" instance="Vella\Pay\Observer\ObserverBeforeSalesOrderPlace"/>
+     </event>
+      <event name="vella_payment_verify_after">
+          <observer name="Vella_Pay_ObserverAfterPaymentVerify" instance="Vella\Pay\Observer\ObserverAfterPaymentVerify" />
+      </event>
+</config>
