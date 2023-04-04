@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="checkout_onepage_controller_success_action">
+        <observer name="Vella_Pay_checkout_onepage_controller_success_action" instance="Vella\Pay\Observer\CheckoutSuccessObserver" />
+    </event>
     <event name="order_status_universal_pending">
         <observer name="disable_order_pending_email_notification" instance="Vella\Pay\Observer\DisableOrderPendingEmailNotification" />
     </event>

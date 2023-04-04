@@ -11,5 +11,6 @@ class DisableOrderPendingEmailNotification implements ObserverInterface
         $order = $observer->getEvent()->getOrder();
         $order->setCanSendNewEmailFlag(false)
         ->setCustomerNoteNotify(false);
+        $order->save();
     }
 }
